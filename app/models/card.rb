@@ -4,6 +4,10 @@ validates :original_text, presence: true
 validates :translated_text, presence: true 
 validate :not_equal
 
+before_create do |card|
+  card.translated_text = card.translated_text.downcase
+  card.original_text = card.original_text.downcase
+end
 #VALID_REGEX = /\A[a-z]+\z/
 #validates :original_text, :translated_text, format: { with:  VALID_REGEX } 
 
