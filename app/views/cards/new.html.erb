@@ -1,0 +1,8 @@
+<p1>Создание новой карточки</p1>
+<%= simple_form_for :card, url: cards_path do |f| %>
+<%= render 'shared/error_messages' %>
+<%= f.input  :original_text, :label => "original text" %>
+<%= f.input  :translated_text, :label => "translated text" %>
+<%= f.input  :review_date, :label => "review_date" %>
+<%= f.button :submit %> 
+<% end %>
