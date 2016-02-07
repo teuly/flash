@@ -10,7 +10,6 @@ before_create do |card|
 end
 #VALID_REGEX = /\A[a-z]+\z/
 #vSalidates :original_text, :translated_text, format: { with:  VALID_REGEX } 
-
 def not_equal
 errors.add(:base, 'translated_text and original_text cannot be equal.') if translated_text == original_text
 end
