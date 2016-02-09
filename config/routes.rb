@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   match '/cards', to: 'cards#index', via: 'get'
   match '/cards/:id/edit', to: 'cards#edit', via: 'get'
-  match '/cards/:id', to: "cards#show", via: 'get'
+  match '/cards/:id', to: 'cards#show', via: 'get'
   match '/cards/new', to: 'cards#new', via: 'get' 
  
   # The priority is based upon order of creation: first created -> highest priority.
