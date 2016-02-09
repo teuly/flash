@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :cards
 
   match '/cards', to: 'cards#index', via: 'get'
-  match '/edit', to: 'cards#edit', via: 'get'
-  match '/show', to: 'cards#show', via: 'get'
+  match 'cards/:id/edit' => 'cards#edit', via: 'get'
+  match "cards/:id" => "cards#show", via: 'get'
   match '/new', to: 'cards#new', via: 'get' 
  
   # The priority is based upon order of creation: first created -> highest priority.
